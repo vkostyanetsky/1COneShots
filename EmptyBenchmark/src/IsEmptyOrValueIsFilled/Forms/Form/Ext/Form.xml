@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormCheck" id="68">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Check</CommandName>
+				<ExtendedTooltip name="FormCheckExtendedTooltip" id="69"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="IterationsNumber" id="17">
+			<DataPath>IterationsNumber</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<MinValue xsi:type="xs:decimal">1</MinValue>
+			<ContextMenu name="IterationsNumberContextMenu" id="18"/>
+			<ExtendedTooltip name="IterationsNumberExtendedTooltip" id="19"/>
+		</InputField>
+		<Table name="Results" id="40">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Results</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ResultsContextMenu" id="41"/>
+			<AutoCommandBar name="ResultsCommandBar" id="42"/>
+			<ExtendedTooltip name="ResultsExtendedTooltip" id="43"/>
+			<SearchStringAddition name="ResultsSearchString" id="44">
+				<AdditionSource>
+					<Item>Results</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ResultsSearchStringContextMenu" id="45"/>
+				<ExtendedTooltip name="ResultsSearchStringExtendedTooltip" id="46"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ResultsViewStatus" id="47">
+				<AdditionSource>
+					<Item>Results</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ResultsViewStatusContextMenu" id="48"/>
+				<ExtendedTooltip name="ResultsViewStatusExtendedTooltip" id="49"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ResultsSearchControl" id="50">
+				<AdditionSource>
+					<Item>Results</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ResultsSearchControlContextMenu" id="51"/>
+				<ExtendedTooltip name="ResultsSearchControlExtendedTooltip" id="52"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ResultsLineNumber" id="83">
+					<DataPath>Results.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ResultsLineNumberContextMenu" id="84"/>
+					<ExtendedTooltip name="ResultsLineNumberExtendedTooltip" id="85"/>
+				</InputField>
+				<ColumnGroup name="ResultsGroupIsEmpty" id="79">
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ResultsGroupIsEmptyExtendedTooltip" id="80"/>
+					<ChildItems>
+						<InputField name="ResultsIsEmpty" id="56">
+							<DataPath>Results.IsEmpty</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ResultsIsEmptyContextMenu" id="57"/>
+							<ExtendedTooltip name="ResultsIsEmptyExtendedTooltip" id="58"/>
+						</InputField>
+						<InputField name="ResultsIsEmptyDescription" id="73">
+							<DataPath>Results.IsEmptyDescription</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ResultsIsEmptyDescriptionContextMenu" id="74"/>
+							<ExtendedTooltip name="ResultsIsEmptyDescriptionExtendedTooltip" id="75"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ResultsGroupValueIsFilled" id="81">
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ResultsGroupValueIsFilledExtendedTooltip" id="82"/>
+					<ChildItems>
+						<InputField name="ResultsValueIsFilled" id="59">
+							<DataPath>Results.ValueIsFilled</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ResultsValueIsFilledContextMenu" id="60"/>
+							<ExtendedTooltip name="ResultsValueIsFilledExtendedTooltip" id="61"/>
+						</InputField>
+						<InputField name="ResultsValueIsFilledDescription" id="76">
+							<DataPath>Results.ValueIsFilledDescription</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ResultsValueIsFilledDescriptionContextMenu" id="77"/>
+							<ExtendedTooltip name="ResultsValueIsFilledDescriptionExtendedTooltip" id="78"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ResultsContext" id="70">
+					<DataPath>Results.Context</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ResultsContextContextMenu" id="71"/>
+					<ExtendedTooltip name="ResultsContextExtendedTooltip" id="72"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.IsEmptyOrValueIsFilled</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Ref" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Ref</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="IterationsNumber" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Iterations Number</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число итераций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>IterationsNumber</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Results" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Results</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="IsEmpty" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Duration</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ValueIsFilled" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Duration</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Context" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Context</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="IsEmptyDescription" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ValueIsFilledDescription" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="LineNumber" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>#</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ResultsIsEmpty</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ResultsIsEmptyDescription</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Results.IsEmpty</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Results.ValueIsFilled</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ResultsValueIsFilled</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ResultsValueIsFilledDescription</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Results.ValueIsFilled</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Results.IsEmpty</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>TextColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="CheckRef" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check ref</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CheckRef</Action>
+		</Command>
+		<Command name="CheckCompositeRef" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check composite ref</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CheckCompositeRef</Action>
+		</Command>
+		<Command name="MakeExperiment" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Make Experiment</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+		<Command name="Check" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Check</Action>
+		</Command>
+	</Commands>
+</Form>
