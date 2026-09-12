@@ -1,7 +1,5 @@
 # 📄 📦 🧾 Export Document Records to JSON
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-
 This data processor exports register records of a single document into a JSON file.
 
 Sometimes you need to see what a document has actually written to registers: to compare postings before and after a change, to attach them to a bug report, or just to diff two documents with a text editor. This processor saves them as plain JSON, so any tool can read them.
