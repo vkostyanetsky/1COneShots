@@ -1,4 +1,4 @@
-# 🧰 1C Small Data Processors
+# 🧰 1C One Shots
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
