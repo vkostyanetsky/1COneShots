@@ -1,4 +1,4 @@
-# 🧰 1C One Shots
+# 1C One Shots 🧰 ⚡ 🔧
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
@@ -6,7 +6,7 @@ A collection of small external data processors for 1C:Enterprise 8.3 — the kin
 
 Each of them lives in its own folder with its own README.
 
-## Processors
+## 📦 Processors
 
 | Processor | What it does |
 | --------- | ------------ |
@@ -14,7 +14,7 @@ Each of them lives in its own folder with its own README.
 | [Export Document Records to JSON](ExportDocumentRecordsToJSON) | Exports register records of a single document into a JSON file. |
 | [Memory Devourer](MemoryDevourer) | Dramatically increases the amount of RAM consumed by `rphost` processes, to see how an application behaves when memory runs out. |
 
-## How to use
+## 🚀 How to use
 
 The processors are stored unpacked, as XML dumps of external data processors. To get an `.epf` file out of one, load the contents of its `src` folder into the configurator or an EDT project and save it as an external data processor.
 
@@ -22,6 +22,6 @@ Then open the result in 1C:Enterprise as an external data processor. None of the
 
 Code and interface of every processor have been made in English.
 
-## License
+## 📜 License
 
 Everything here is released into the public domain under [the Unlicense](http://unlicense.org/). Take it, change it, use it however you like.

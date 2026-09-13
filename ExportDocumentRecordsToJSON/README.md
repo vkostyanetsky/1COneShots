@@ -1,4 +1,4 @@
-# 📄 📦 🧾 Export Document Records to JSON
+# Export Document Records to JSON 📄 📦 🧾
 
 This data processor exports register records of a single document into a JSON file.
 
@@ -6,7 +6,7 @@ Sometimes you need to see what a document has actually written to registers: to 
 
 It is aimed at the heavy end of that task: documents with hundreds of thousands or millions of records, where the obvious approach — read everything on the server, build the whole file there, hand it over to the client — does not survive contact with reality.
 
-## The main point: records travel in chunks
+## 🧩 The main point: records travel in chunks
 
 This is the whole reason the processor exists, and the thing to keep in mind if you adapt its code.
 
@@ -33,11 +33,11 @@ Two things this avoids:
 
 The cost is many server calls instead of one — on a slow channel a very large export takes a while. That is the trade chosen here on purpose: slow but finished beats fast but out of memory.
 
-## How it works
+## ⚙️ How it works
 
 Pick a document, press **Export records**, and choose where to save the file. The processor walks through the document's register records and writes them one register at a time, in the chunks described above.
 
-## What is exported
+## 📤 What is exported
 
 Accumulation registers and information registers only. Other kinds of registers the document may write to (accounting, calculation) are skipped.
 
@@ -52,7 +52,7 @@ Values are converted to something JSON can hold:
 | Reference, UUID, enum   | string representation                   |
 | `Undefined`, `Null`     | empty string                            |
 
-## Output format
+## 🗂️ Output format
 
 The root object has one property per register, holding an array of records:
 
@@ -75,7 +75,7 @@ The root object has one property per register, holding an array of records:
 
 Registers the document has no records in are omitted.
 
-## Notes
+## 📝 Notes
 
 Code and interface have been made in English.
 

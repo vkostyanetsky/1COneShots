@@ -1,4 +1,4 @@
-# 🚀 🧪 💡 Empty Benchmark
+# Empty Benchmark 🚀 🧪 💡
 
 This data processor compares which way to check a reference for an empty value works faster:
 
